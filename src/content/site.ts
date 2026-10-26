@@ -41,9 +41,10 @@ export const team: Member[] = [
     skills: ['Game design', 'Direção', 'Narrativa'],
   },
   {
-    slug: 'pessoa-dois',
-    name: 'Pessoa Dois', // TODO
-    role: 'Programação',
+    slug: 'luiz-sachez',
+    name: 'Luiz Sachez',
+    art: '/team/luiz-sachez.webp',
+    role: 'Programação', // TODO: confirmar a função
     bio: 'Responsável pelo motor do jogo: gameplay, ferramentas e desempenho. Transforma o design em algo que roda liso.', // TODO
     skills: ['Gameplay', 'Ferramentas', 'Performance'],
   },

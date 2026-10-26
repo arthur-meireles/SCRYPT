@@ -198,7 +198,7 @@ p { margin: 0; }
 .face__art {
   flex: 1; margin: 10px 10px 0; position: relative; display: grid; place-items: center;
   border-radius: 46% 46% 10px 10px / 26% 26% 10px 10px;
-  background-color: #1b1236; background-size: cover; background-position: center;
+  background-color: #1b1236; background-size: cover; background-position: center 18%;
   background-image: radial-gradient(70% 60% at 50% 40%, rgba(139,109,240,0.5), transparent 75%);
   box-shadow: 0 0 0 2px rgba(196,176,255,0.35), 0 0 0 5px #0f0a1f, 0 0 0 6px rgba(196,176,255,0.2);
 }
