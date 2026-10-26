@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import type { Member } from '../content/site'
 
-// Carta de jogo: frente (retrato + nome) e verso (o que a pessoa faz).
+// Carta de jogo: frente (arte em tela cheia + nome) e verso (o que a pessoa faz).
 // Desktop vira no hover/foco; no toque, vira ao tocar.
 export default function TeamCard({ member }: { member: Member }) {
   const [flipped, setFlipped] = useState(false)
@@ -24,11 +24,19 @@ export default function TeamCard({ member }: { member: Member }) {
       <div className="flip__inner">
         <div className="face face--front">
           <div className="face__panel">
-            <div className="face__art" style={member.art ? { backgroundImage: `url(${member.art})` } : undefined}>
+            <div
+              className="face__art"
+              style={
+                member.art
+                  ? { backgroundImage: `url(${member.art})`, backgroundPosition: member.artPosition }
+                  : undefined
+              }
+            >
               {!member.art && <img src="/brand/logo.png" alt="" />}
             </div>
-            <div className="face__ribbon">{member.name}</div>
-            <div className="face__text">
+            <div className="face__shade" aria-hidden="true" />
+            <div className="face__caption">
+              <span className="face__name">{member.name}</span>
               <span className="face__role">{member.role}</span>
             </div>
           </div>

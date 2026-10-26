@@ -166,7 +166,7 @@ p { margin: 0; }
 /* ---------- about + cartas ---------- */
 .about h2 { max-width: 20ch; }
 .team {
-  margin-top: 64px; display: grid; grid-template-columns: repeat(3, minmax(0, 300px));
+  margin-top: 64px; display: grid; grid-template-columns: repeat(3, minmax(0, 340px));
   gap: clamp(24px, 4vw, 56px); justify-content: center;
 }
 
@@ -184,7 +184,7 @@ p { margin: 0; }
 
 .face {
   position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden;
-  border-radius: 20px; padding: 9px;
+  border-radius: 18px; padding: 5px;
   background: linear-gradient(145deg, #d9ccff 0%, #7a55e6 32%, #2b1766 62%, #b9a3ff 100%);
   box-shadow: 0 24px 50px -18px rgba(60, 30, 140, 0.55), 0 0 0 1px rgba(255,255,255,0.12) inset;
 }
@@ -194,23 +194,23 @@ p { margin: 0; }
   background: #0f0a1f; color: #f1edfb; display: flex; flex-direction: column;
 }
 
-/* frente */
+/* frente: arte em tela cheia + degradê leve para o nome */
 .face__art {
-  flex: 1; margin: 10px 10px 0; position: relative; display: grid; place-items: center;
-  border-radius: 46% 46% 10px 10px / 26% 26% 10px 10px;
-  background-color: #1b1236; background-size: cover; background-position: center 18%;
+  position: absolute; inset: 0; display: grid; place-items: center;
+  background-color: #1b1236; background-size: cover; background-position: center;
   background-image: radial-gradient(70% 60% at 50% 40%, rgba(139,109,240,0.5), transparent 75%);
-  box-shadow: 0 0 0 2px rgba(196,176,255,0.35), 0 0 0 5px #0f0a1f, 0 0 0 6px rgba(196,176,255,0.2);
 }
 .face__art img { width: 46%; opacity: 0.85; filter: drop-shadow(0 8px 24px rgba(139,109,240,0.6)); }
-.face__ribbon {
-  margin: 16px 0 0; padding: 9px 12px; text-align: center; font-weight: 700; font-size: 1.15rem;
-  letter-spacing: 0.02em;
-  background: linear-gradient(90deg, transparent, rgba(139,109,240,0.4) 20%, rgba(139,109,240,0.4) 80%, transparent);
-  border-block: 1px solid rgba(196,176,255,0.45);
+.face__shade {
+  position: absolute; inset: auto 0 0 0; height: 42%; pointer-events: none;
+  background: linear-gradient(to top, rgba(8, 5, 20, 0.82) 0%, rgba(8, 5, 20, 0.45) 50%, rgba(8, 5, 20, 0) 100%);
 }
-.face__text { padding: 12px 16px 18px; text-align: center; }
-.face__role { color: var(--violet-300); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+.face__caption {
+  position: absolute; inset: auto 0 0 0; padding: 0 16px 18px; text-align: center;
+  display: grid; gap: 4px; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+.face__name { font-weight: 700; font-size: 1.4rem; letter-spacing: 0.01em; line-height: 1.15; }
+.face__role { color: var(--violet-300); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
 
 /* verso */
 .face--back .face__panel {
@@ -302,7 +302,7 @@ p { margin: 0; }
 @media (max-width: 860px) {
   .nav__links { display: none; }
   .game, .journal { grid-template-columns: 1fr; }
-  .team { grid-template-columns: minmax(0, 300px); }
+  .team { grid-template-columns: minmax(0, 340px); }
   .journal .newsletter { position: static; }
 }
 

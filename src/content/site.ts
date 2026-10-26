@@ -29,29 +29,33 @@ export interface Member {
   bio: string // aparece no verso
   skills: string[] // chips no verso
   art?: string // retrato da carta, ex.: '/team/pessoa-um.webp' (veja README)
+  artPosition?: string // background-position do retrato (padrão: 'center 18%')
 }
 
 // Uma carta por pessoa. Troque os dados e solte o retrato em public/team/.
 export const team: Member[] = [
   {
-    slug: 'pessoa-um',
-    name: 'Pessoa Um', // TODO
-    role: 'Direção e design',
-    bio: 'Conduz a visão do jogo e desenha as mecânicas, o ritmo e a progressão. Decide o que entra, o que sai e por quê.', // TODO
-    skills: ['Game design', 'Direção', 'Narrativa'],
-  },
-  {
-    slug: 'luiz-sachez',
-    name: 'Luiz Sachez',
-    art: '/team/luiz-sachez.webp',
+    slug: 'rannyel-lino',
+    name: 'Rannyel Lino',
+    art: '/team/rannyel-lino.webp',
+    artPosition: 'center 40%', // retrato vertical: enquadra capa, rosto e braço
     role: 'Programação', // TODO: confirmar a função
     bio: 'Responsável pelo motor do jogo: gameplay, ferramentas e desempenho. Transforma o design em algo que roda liso.', // TODO
     skills: ['Gameplay', 'Ferramentas', 'Performance'],
   },
   {
-    slug: 'pessoa-tres',
-    name: 'Pessoa Três', // TODO
-    role: 'Arte e animação',
+    slug: 'luiz-sachez',
+    name: 'Luiz Sachez',
+    art: '/team/luiz-sachez.webp',
+    role: 'Direção e design', // TODO: confirmar a função
+    bio: 'Conduz a visão do jogo e desenha as mecânicas, o ritmo e a progressão. Decide o que entra, o que sai e por quê.', // TODO
+    skills: ['Game design', 'Direção', 'Narrativa'],
+  },
+  {
+    slug: 'arthur-meireles',
+    name: 'Arthur Meireles',
+    // art: '/team/arthur-meireles.webp', // TODO: salvar o retrato em public/team/ e descomentar
+    role: 'Arte e animação', // TODO: confirmar a função
     bio: 'Define a identidade visual, dos personagens aos cenários, e dá vida a tudo em movimento.', // TODO
     skills: ['Direção de arte', 'Animação', 'VFX'],
   },
