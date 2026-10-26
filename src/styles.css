@@ -220,6 +220,14 @@ p { margin: 0; }
 .flip--framed .face__shade { inset: auto 9% 8% 9%; height: 30%; border-radius: 0 0 14px 14px; }
 .flip--framed .face__caption { padding-bottom: 11%; }
 
+/* verso das cartas emolduradas: moldura dourada para combinar com a frente */
+.flip--framed .face--back {
+  padding: 7px; border-radius: 22px;
+  background: linear-gradient(145deg, #f0d48a 0%, #b88a2e 30%, #6b4a14 58%, #e2bf6a 100%);
+  box-shadow: 0 22px 30px -10px rgba(60, 30, 140, 0.45);
+}
+.flip--framed .face--back .face__panel { border-radius: 16px; box-shadow: inset 0 0 0 2px rgba(240, 212, 138, 0.35); }
+
 /* verso */
 .face--back .face__panel {
   padding: 26px 22px; align-items: center; text-align: center; gap: 8px;

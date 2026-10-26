@@ -47,6 +47,7 @@ export const team: Member[] = [
     slug: 'luiz-sachez',
     name: 'Luiz Sachez',
     art: '/team/luiz-sachez.webp',
+    framed: true, // a imagem já é a carta inteira, com moldura (2:3, cantos transparentes)
     role: 'Direção e design', // TODO: confirmar a função
     bio: 'Conduz a visão do jogo e desenha as mecânicas, o ritmo e a progressão. Decide o que entra, o que sai e por quê.', // TODO
     skills: ['Game design', 'Direção', 'Narrativa'],
