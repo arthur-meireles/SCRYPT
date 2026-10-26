@@ -8,13 +8,12 @@ export const studio = {
 }
 
 export const game = {
-  title: 'Projeto Aurora', // TODO: nome real do jogo
+  title: 'Party Game Web', // nome de trabalho: o título oficial ainda não foi definido
   status: 'Em desenvolvimento',
-  genre: 'Ação · Aventura', // TODO
-  platforms: 'PC', // TODO
+  genre: 'Party game',
+  platforms: 'Navegador (Web)',
   pitch:
-    'Um mundo em ruínas, uma luz que não se apaga e escolhas que cobram o seu preço. Nosso primeiro projeto está em desenvolvimento ativo e o processo fica registrado no blog.', // TODO
-  wishlistUrl: '#', // TODO: link Steam
+    'Um party game para jogar direto no navegador, construído sobre as mecânicas de pedra, papel e tesoura. O jogo está em desenvolvimento e o processo fica registrado no blog.',
 }
 
 export const about = {

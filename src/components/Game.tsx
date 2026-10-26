@@ -18,8 +18,8 @@ export default function Game() {
             <div><dt>Plataformas</dt><dd>{game.platforms}</dd></div>
           </dl>
           <div className="game__cta">
-            <a className="btn" href={game.wishlistUrl}>Adicionar à lista de desejos</a>
-            <Link className="btn btn--ghost" to="/#newsletter">Receber novidades</Link>
+            <Link className="btn" to="/#newsletter">Receber novidades</Link>
+            <Link className="btn btn--ghost" to="/blog">Acompanhar o desenvolvimento</Link>
           </div>
         </div>
       </div>
