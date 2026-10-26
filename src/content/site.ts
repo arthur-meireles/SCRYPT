@@ -53,7 +53,8 @@ export const team: Member[] = [
   {
     slug: 'arthur-meireles',
     name: 'Arthur Meireles',
-    // art: '/team/arthur-meireles.webp', // TODO: salvar o retrato em public/team/ e descomentar
+    art: '/team/arthur-meireles.webp',
+    artPosition: 'center 20%', // retrato vertical: mantém rosto e arma
     role: 'Arte e animação', // TODO: confirmar a função
     bio: 'Define a identidade visual, dos personagens aos cenários, e dá vida a tudo em movimento.', // TODO
     skills: ['Direção de arte', 'Animação', 'VFX'],
