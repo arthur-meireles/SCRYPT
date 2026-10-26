@@ -28,7 +28,8 @@ export interface Member {
   bio: string // aparece no verso
   skills: string[] // chips no verso
   art?: string // retrato da carta, ex.: '/team/pessoa-um.webp' (veja README)
-  artPosition?: string // background-position do retrato (padrão: 'center 18%')
+  artPosition?: string // background-position do retrato (padrão: 'center')
+  framed?: boolean // true: a arte já traz a própria moldura; o site não desenha a dele
 }
 
 // Uma carta por pessoa. Troque os dados e solte o retrato em public/team/.
@@ -54,7 +55,7 @@ export const team: Member[] = [
     slug: 'arthur-meireles',
     name: 'Arthur Meireles',
     art: '/team/arthur-meireles.webp',
-    artPosition: 'center 20%', // retrato vertical: mantém rosto e arma
+    framed: true, // a imagem já é a carta inteira, com moldura (2:3, cantos transparentes)
     role: 'Arte e animação', // TODO: confirmar a função
     bio: 'Define a identidade visual, dos personagens aos cenários, e dá vida a tudo em movimento.', // TODO
     skills: ['Direção de arte', 'Animação', 'VFX'],

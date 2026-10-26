@@ -8,7 +8,7 @@ export default function TeamCard({ member }: { member: Member }) {
 
   return (
     <div
-      className={`flip${flipped ? ' is-flipped' : ''}`}
+      className={`flip${flipped ? ' is-flipped' : ''}${member.framed ? ' flip--framed' : ''}`}
       role="button"
       tabIndex={0}
       aria-pressed={flipped}

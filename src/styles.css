@@ -170,7 +170,7 @@ p { margin: 0; }
   gap: clamp(24px, 4vw, 56px); justify-content: center;
 }
 
-.flip { aspect-ratio: 5 / 7; perspective: 1400px; cursor: pointer; outline-offset: 6px; -webkit-tap-highlight-color: transparent; }
+.flip { aspect-ratio: 2 / 3; perspective: 1400px; cursor: pointer; outline-offset: 6px; -webkit-tap-highlight-color: transparent; }
 .flip__inner {
   position: relative; width: 100%; height: 100%; transform-style: preserve-3d;
   transition: transform 0.75s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -211,6 +211,14 @@ p { margin: 0; }
 }
 .face__name { font-weight: 700; font-size: 1.4rem; letter-spacing: 0.01em; line-height: 1.15; }
 .face__role { color: var(--violet-300); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
+
+/* carta cuja arte já traz a moldura: a imagem é a carta inteira */
+.flip--framed .face--front { padding: 0; background: none; box-shadow: none; border-radius: 0; filter: drop-shadow(0 22px 30px rgba(60, 30, 140, 0.45)); }
+.flip--framed .face--front .face__panel { background: none; border-radius: 0; overflow: visible; }
+.flip--framed .face__art { background-size: 100% 100%; background-color: transparent; }
+.flip--framed .face__art[style] { background-repeat: no-repeat; }
+.flip--framed .face__shade { inset: auto 9% 8% 9%; height: 30%; border-radius: 0 0 14px 14px; }
+.flip--framed .face__caption { padding-bottom: 11%; }
 
 /* verso */
 .face--back .face__panel {
