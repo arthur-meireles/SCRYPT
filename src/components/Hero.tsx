@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { studio } from '../content/site'
 
 export default function Hero() {
@@ -6,7 +7,7 @@ export default function Hero() {
       <video
         className="hero__video"
         src="/video/hero.mp4"
-        poster="/brand/keyframe-169.jpg"
+        poster="/brand/hero-poster.jpg"
         autoPlay
         muted
         loop
@@ -16,16 +17,14 @@ export default function Hero() {
       />
       <div className="hero__shade" aria-hidden="true" />
       <div className="hero__content">
-        <p className="eyebrow">Estúdio independente de games</p>
-        <h1>{studio.tagline}</h1>
+        <p className="eyebrow">Estúdio indie de games</p>
+        <h1>{studio.headline}</h1>
+        <p className="hero__sub">{studio.subline}</p>
         <div className="hero__cta">
-          <a className="btn" href="#jogo">Conheça o jogo</a>
-          <a className="btn btn--ghost" href="#newsletter">Acompanhe o diário</a>
+          <Link className="btn" to="/#jogo">Conheça o jogo</Link>
+          <Link className="btn btn--ghost" to="/blog">Ler o blog</Link>
         </div>
       </div>
-      <a className="hero__scroll" href="#jogo" aria-label="Rolar para o jogo">
-        <span />
-      </a>
     </section>
   )
 }

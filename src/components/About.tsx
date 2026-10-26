@@ -1,4 +1,5 @@
 import { about, team } from '../content/site'
+import TeamCard from './TeamCard'
 
 export default function About() {
   return (
@@ -9,15 +10,13 @@ export default function About() {
           <h2>{about.title}</h2>
           <p className="lead">{about.text}</p>
         </div>
-        <ul className="team">
-          {team.map((p) => (
-            <li key={p.name} className="card reveal">
-              <span className="avatar" aria-hidden="true">{p.initials}</span>
-              <strong>{p.name}</strong>
-              <span>{p.role}</span>
-            </li>
+        <div className="team">
+          {team.map((m) => (
+            <div key={m.slug} className="reveal">
+              <TeamCard member={m} />
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   )

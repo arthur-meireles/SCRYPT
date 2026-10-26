@@ -1,3 +1,4 @@
+import { Link, NavLink } from 'react-router-dom'
 import { studio } from '../content/site'
 import type { Theme } from '../useTheme'
 
@@ -9,14 +10,14 @@ interface Props {
 export default function Nav({ theme, onToggleTheme }: Props) {
   return (
     <header className="nav">
-      <a className="nav__brand" href="#topo" aria-label={studio.name}>
+      <Link className="nav__brand" to="/" aria-label={studio.name}>
         <img src="/brand/logo.png" alt="" width="32" height="32" />
         <span>{studio.name}</span>
-      </a>
+      </Link>
       <nav className="nav__links" aria-label="Seções">
-        <a href="#jogo">Jogo</a>
-        <a href="#estudio">Estúdio</a>
-        <a href="#diario">Diário</a>
+        <Link to="/#jogo">Jogo</Link>
+        <Link to="/#estudio">Estúdio</Link>
+        <NavLink to="/blog">Blog</NavLink>
       </nav>
       <div className="nav__actions">
         <button
@@ -36,7 +37,7 @@ export default function Nav({ theme, onToggleTheme }: Props) {
             </svg>
           )}
         </button>
-        <a className="btn btn--small" href="#newsletter">Newsletter</a>
+        <Link className="btn btn--small" to="/#newsletter">Newsletter</Link>
       </div>
     </header>
   )

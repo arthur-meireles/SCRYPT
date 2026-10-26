@@ -23,4 +23,6 @@ ffmpeg -i hero_original.mp4 -filter_complex "[0:v]split[a][b];[b]reverse[r];[a][
   -c:v libx264 -crf 23 -preset slow -movflags +faststart -an public/video/hero.mp4
 ```
 
+> **Atualização:** o pedido seguinte (vídeo claro, 5 a 6 ângulos, cortes enérgicos) ainda não foi gerado, pois o Magnific estava desconectado. Entrou um provisório derivado deste clipe; veja `docs/hero-v2-briefing.md`. Este clipe escuro original não está mais no site.
+
 O original sem perdas está no Magnific (download pelo projeto Personal, tag `studio-hero`).

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { game } from '../content/site'
 
 export default function Game() {
@@ -18,7 +19,7 @@ export default function Game() {
           </dl>
           <div className="game__cta">
             <a className="btn" href={game.wishlistUrl}>Adicionar à lista de desejos</a>
-            <a className="btn btn--ghost" href="#newsletter">Receber novidades</a>
+            <Link className="btn btn--ghost" to="/#newsletter">Receber novidades</Link>
           </div>
         </div>
       </div>

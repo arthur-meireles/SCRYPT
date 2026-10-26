@@ -1,9 +1,10 @@
 // Todo o texto do site vive aqui. Os valores marcados com TODO são provisórios.
 
 export const studio = {
-  name: 'Studio S', // TODO: nome real do estúdio
-  tagline: 'Jogos feitos por três pessoas, do jeito devagar e bem feito.',
-  email: 'oi@studio-s.example', // TODO
+  name: 'S-Crypt',
+  headline: 'Games independentes, feitos com esmero.',
+  subline: 'Design autoral, código sólido e acabamento sem pressa.',
+  email: 'contato@s-crypt.example', // TODO
 }
 
 export const game = {
@@ -12,45 +13,74 @@ export const game = {
   genre: 'Ação · Aventura', // TODO
   platforms: 'PC', // TODO
   pitch:
-    'Um mundo em ruínas, uma luz que não se apaga e escolhas que mudam o caminho. Nosso primeiro jogo nasce de um protótipo e cresce com a comunidade acompanhando cada passo.', // TODO
+    'Um mundo em ruínas, uma luz que não se apaga e escolhas que cobram o seu preço. Nosso primeiro projeto está em desenvolvimento ativo e o processo fica registrado no blog.', // TODO
   wishlistUrl: '#', // TODO: link Steam
 }
 
 export const about = {
-  title: 'Somos três.',
-  text: 'Um estúdio pequeno por escolha: decisões rápidas, zero burocracia e cuidado em cada detalhe. Fazemos um jogo por vez e mostramos o processo sem filtro.',
+  title: 'Ofício, escala pequena, controle total.',
+  text: 'Somos um estúdio independente de desenvolvimento de games. Mantemos a equipe enxuta para decidir rápido e responder por cada detalhe, da mecânica ao acabamento. Um projeto por vez, publicado quando está pronto.',
 }
 
-export const team = [
-  { name: 'Pessoa Um', role: 'Direção e design', initials: 'P1' }, // TODO
-  { name: 'Pessoa Dois', role: 'Programação', initials: 'P2' }, // TODO
-  { name: 'Pessoa Três', role: 'Arte e animação', initials: 'P3' }, // TODO
+export interface Member {
+  slug: string
+  name: string
+  role: string // aparece na frente da carta
+  bio: string // aparece no verso
+  skills: string[] // chips no verso
+  art?: string // retrato da carta, ex.: '/team/pessoa-um.webp' (veja README)
+}
+
+// Uma carta por pessoa. Troque os dados e solte o retrato em public/team/.
+export const team: Member[] = [
+  {
+    slug: 'pessoa-um',
+    name: 'Pessoa Um', // TODO
+    role: 'Direção e design',
+    bio: 'Conduz a visão do jogo e desenha as mecânicas, o ritmo e a progressão. Decide o que entra, o que sai e por quê.', // TODO
+    skills: ['Game design', 'Direção', 'Narrativa'],
+  },
+  {
+    slug: 'pessoa-dois',
+    name: 'Pessoa Dois', // TODO
+    role: 'Programação',
+    bio: 'Responsável pelo motor do jogo: gameplay, ferramentas e desempenho. Transforma o design em algo que roda liso.', // TODO
+    skills: ['Gameplay', 'Ferramentas', 'Performance'],
+  },
+  {
+    slug: 'pessoa-tres',
+    name: 'Pessoa Três', // TODO
+    role: 'Arte e animação',
+    bio: 'Define a identidade visual, dos personagens aos cenários, e dá vida a tudo em movimento.', // TODO
+    skills: ['Direção de arte', 'Animação', 'VFX'],
+  },
 ]
 
 export interface Post {
   slug: string
   title: string
   date: string // ISO
-  tag: string
+  tag: string // tema
   excerpt: string
   body: string[]
 }
 
 // Mais recentes primeiro. Para publicar: adicione um item no topo.
+// Os textos abaixo são de exemplo (TODO: substituir pelos reais).
 export const posts: Post[] = [
   {
-    slug: 'primeiro-diario',
+    slug: 'por-que-abrimos-o-estudio',
     title: 'Por que abrimos o estúdio',
     date: '2026-10-26',
     tag: 'Estúdio',
-    excerpt: 'Três pessoas, uma ideia e a decisão de fazer tudo à vista.',
+    excerpt: 'A decisão de fazer games por conta própria e de mostrar o processo.',
     body: [
-      'Este é o primeiro texto do diário. Aqui contamos o que estamos construindo, o que deu errado e o que aprendemos.',
-      'A newsletter chega no seu e-mail sempre que publicamos algo novo, sem frequência fixa e sem spam.',
+      'Este é o primeiro texto do blog. Aqui registramos o que estamos construindo, o que deu errado e o que aprendemos no caminho.',
+      'A newsletter envia cada novo post por e-mail, sem frequência fixa e sem spam.',
     ],
   },
   {
-    slug: 'prototipo',
+    slug: 'do-prototipo-a-primeira-sala',
     title: 'Do protótipo à primeira sala jogável',
     date: '2026-10-20',
     tag: 'Desenvolvimento',
@@ -59,4 +89,36 @@ export const posts: Post[] = [
       'Texto de exemplo. Substitua por um relato real do desenvolvimento do jogo.',
     ],
   },
+  {
+    slug: 'linguagem-visual',
+    title: 'Em busca da linguagem visual',
+    date: '2026-10-12',
+    tag: 'Arte',
+    excerpt: 'Referências, testes de paleta e as decisões que definiram o estilo.',
+    body: [
+      'Texto de exemplo. Aqui entram referências, estudos de cor e o raciocínio por trás da direção de arte.',
+    ],
+  },
+  {
+    slug: 'ritmo-e-risco',
+    title: 'Ritmo e risco: como pensamos o combate',
+    date: '2026-10-05',
+    tag: 'Design',
+    excerpt: 'Princípios de design que guiam cada encontro do jogo.',
+    body: [
+      'Texto de exemplo. Descreva os princípios de design de combate e os testes que os validaram.',
+    ],
+  },
+  {
+    slug: 'uma-semana-de-trabalho',
+    title: 'Uma semana de trabalho no estúdio',
+    date: '2026-09-28',
+    tag: 'Bastidores',
+    excerpt: 'Como organizamos o dia a dia de uma equipe pequena.',
+    body: [
+      'Texto de exemplo. Rotina, ferramentas e o que não funcionou.',
+    ],
+  },
 ]
+
+export const tags = Array.from(new Set(posts.map((p) => p.tag)))
