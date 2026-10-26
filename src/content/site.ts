@@ -38,7 +38,7 @@ export const team: Member[] = [
     slug: 'rannyel-lino',
     name: 'Rannyel Lino',
     art: '/team/rannyel-lino.webp',
-    artPosition: 'center 40%', // retrato vertical: enquadra capa, rosto e braço
+    framed: true, // a imagem já é a carta inteira, com moldura (2:3, cantos transparentes)
     role: 'Programação', // TODO: confirmar a função
     bio: 'Responsável pelo motor do jogo: gameplay, ferramentas e desempenho. Transforma o design em algo que roda liso.', // TODO
     skills: ['Gameplay', 'Ferramentas', 'Performance'],
